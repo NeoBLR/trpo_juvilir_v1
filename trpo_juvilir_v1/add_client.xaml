@@ -59,10 +59,10 @@
         </Style>
         <SolidColorBrush x:Key="Button.Static.Background" Color="#FFDDDDDD"/>
         <SolidColorBrush x:Key="Button.Static.Border" Color="#FF707070"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#FFBEE6FD"/>
-        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#FF3C7FB1"/>
-        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#FFC4E5F6"/>
-        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#FF2C628B"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Background" Color="#19BEE6FD"/>
+        <SolidColorBrush x:Key="Button.MouseOver.Border" Color="#193C7FB1"/>
+        <SolidColorBrush x:Key="Button.Pressed.Background" Color="#19C4E5F6"/>
+        <SolidColorBrush x:Key="Button.Pressed.Border" Color="#192C628B"/>
         <SolidColorBrush x:Key="Button.Disabled.Background" Color="#FFF4F4F4"/>
         <SolidColorBrush x:Key="Button.Disabled.Border" Color="#FFADB2B5"/>
         <SolidColorBrush x:Key="Button.Disabled.Foreground" Color="#FF838383"/>
@@ -194,7 +194,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="surname" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
+                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
             
             </Grid>
 
@@ -205,7 +205,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="firsname" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
+                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
 
             </Grid>
 
@@ -216,7 +216,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="patronymic" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
+                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
 
             </Grid>
 
@@ -227,7 +227,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="data of birht" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
+                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
 
             </Grid>
 
@@ -238,7 +238,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="pasport id" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
+                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
 
             </Grid>
             
@@ -249,11 +249,11 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="Adress" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
+                <TextBox Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
 
             </Grid>
 
-            <Button Grid.Row="6" Content="Добавить" Background="#19DDDDDD" Foreground="White" BorderBrush="#00707070"/>
+            <Button Style="{DynamicResource btn_grad}" Grid.Row="6" Content="Добавить" Background="#19DDDDDD" Foreground="White" BorderBrush="#00707070"/>
 
         </Grid>
 
