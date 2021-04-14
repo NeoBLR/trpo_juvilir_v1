@@ -167,5 +167,11 @@ namespace trpo_juvilir_v1
                 dataView.Table.Rows.Remove(drv.Row);
             }
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            add_client add_Client = new add_client();
+            add_Client.Show();
+        }
     }
 }
