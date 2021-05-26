@@ -84,6 +84,7 @@
     <Compile Include="change_client.xaml.cs">
       <DependentUpon>change_client.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Client.cs" />
     <Compile Include="database.xaml.cs">
       <DependentUpon>database.xaml</DependentUpon>
     </Compile>
@@ -134,6 +135,11 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="img\icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="db.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

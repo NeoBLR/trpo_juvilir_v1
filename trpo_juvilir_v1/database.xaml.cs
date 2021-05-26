@@ -189,5 +189,62 @@ namespace trpo_juvilir_v1
             remove();
             conect();
         }
+
+        private void Button_Click_3(object sender, RoutedEventArgs e)
+        {
+
+            //goJob.SelectedItem
+
+
+
+            //MessageBox.Show($"id {clid} name {clname}");
+
+            ProgramStatic.cclient.Show();
+        }
+
+        public int selected_id;
+        private void goJob_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            DataGrid dg = (DataGrid)sender;
+            DataRowView row_selected = dg.SelectedItem as DataRowView;
+
+            if (row_selected != null)
+            {
+                selected_id = Convert.ToInt32(row_selected["Code_Clienta"].ToString());
+
+                ProgramStatic.cclient.t_surname.Text = row_selected["surname"].ToString();
+                ProgramStatic.cclient.t_firsname.Text = row_selected["firstname"].ToString();
+                ProgramStatic.cclient.t_patronymic.Text = row_selected["patronymic"].ToString();
+                ProgramStatic.cclient.t_birht.Text = row_selected["Date_of_Birth"].ToString();
+                ProgramStatic.cclient.t_passport.Text = row_selected["passport_ID"].ToString();
+                ProgramStatic.cclient.t_adress.Text = row_selected["Address"].ToString();
+
+
+            }
+
+
+
+        }
+
+        private void Button_Click_4(object sender, RoutedEventArgs e)
+        {
+
+            OleDbConnection cn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\\Users\\regman\\source\\repos\\trpo_juvilir_v1\\trpo_juvilir_v1\\db.mdb");
+
+            cn.Open();
+
+            // OleDbDataAdapter da = new OleDbDataAdapter("select * from client", cn);
+            // OleDbCommandBuilder cb = new OleDbCommandBuilder(da);
+
+            string[] str = new string[6];
+
+            OleDbCommand oleDbCommand = new OleDbCommand($"", cn);
+
+            oleDbCommand.ExecuteNonQuery();
+
+            cn.Close();
+
+        }
     }
 }

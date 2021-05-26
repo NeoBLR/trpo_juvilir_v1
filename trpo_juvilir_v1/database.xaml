@@ -217,15 +217,15 @@
 
                             </Grid.ColumnDefinitions>
                             <Button Content="Добавить" Grid.Column="0"  FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_1"/>
-                            <Button Content="Изменить" Grid.Column="1"   FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF"/>
-                            <Button Content="Удалить" Grid.Column="2"   FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF"/>
+                            <Button Content="Изменить" Grid.Column="1"   FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_3"/>
+                            <Button Content="Удалить" Grid.Column="2"   FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_4"/>
                             <Button Content="Обновить" Grid.Column="3"   FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_2"/>
 
 
                         </Grid>
 
 
-                        <DataGrid x:Name="goJob" ColumnWidth="*" Grid.Row="1" Margin="0" VerticalAlignment="Top" HeadersVisibility="Column" IsReadOnly="True" RowBackground="#19FFFFFF" HorizontalGridLinesBrush="#4C000000" VerticalGridLinesBrush="#4C000000" Foreground="White">
+                        <DataGrid x:Name="goJob" ColumnWidth="*" Grid.Row="1" Margin="0" VerticalAlignment="Top" HeadersVisibility="Column" IsReadOnly="True" RowBackground="#19FFFFFF" HorizontalGridLinesBrush="#4C000000" VerticalGridLinesBrush="#4C000000" Foreground="White" SelectionChanged="goJob_SelectionChanged" SelectionMode="Single">
                             <DataGrid.Resources>
                                 <Style TargetType="{x:Type DataGridColumnHeader}">
                                     <Setter Property="Padding" Value="10 0 10 0"/>
