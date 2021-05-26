@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+using System.Data.OleDb;
+using System.Data;
+
 namespace trpo_juvilir_v1
 {
     /// <summary>
@@ -81,6 +84,53 @@ namespace trpo_juvilir_v1
             TextBox tb = (TextBox)sender;
             tb.Text = string.Empty;
             tb.GotFocus -= TextBox_GotFocus;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+
+            OleDbConnection cn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\\Users\\regman\\source\\repos\\trpo_juvilir_v1\\trpo_juvilir_v1\\db.mdb");
+
+            cn.Open();
+
+            // OleDbDataAdapter da = new OleDbDataAdapter("select * from client", cn);
+            // OleDbCommandBuilder cb = new OleDbCommandBuilder(da);
+
+            string [] str = new string[6];
+
+            str[0] = t_surname.Text;
+            str[1] = t_firsname.Text;
+            str[2] = t_patronymic.Text;
+            str[3] = t_birht.Text; //26.05.2021
+            str[4] = t_passport.Text;
+            str[5] = t_adress.Text;
+
+
+            OleDbCommand oleDbCommand = new OleDbCommand($"insert into client([surname], [firstname], [patronymic], [Date_of_Birth], [passport_ID], [Address]) values('{str[0]}', '{str[1]}', '{str[2]}', '{str[3]}', '{str[4]}', '{str[5]}')", cn);
+
+            oleDbCommand.ExecuteNonQuery();
+
+            cn.Close();
+
+
+            // DataSet ds = new DataSet();
+
+            //da.Fill(ds, "Code_Clienta");
+
+
+            //DatagridXAML.ItemsSource = ds.Tables["Code_Clienta"].DefaultView;
+            //goJob.ItemsSource = ds.Tables["Code_Clienta"].DefaultView;
+
+
+
+            MessageBox.Show("Добавленно");
+
+
+
+
+            ProgramStatic.dbase.remove();
+            ProgramStatic.dbase.conect();
+
         }
     }
 }

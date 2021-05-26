@@ -54,6 +54,13 @@ namespace trpo_juvilir_v1
             }
         }
         
+        public void remove()
+        {
+            goJob.ItemsSource = null;
+           //MessageBox.Show("removed");
+
+        }
+
         public void conect()
         {
             OleDbConnection cn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\\Users\\regman\\source\\repos\\trpo_juvilir_v1\\trpo_juvilir_v1\\db.mdb");
@@ -71,6 +78,8 @@ namespace trpo_juvilir_v1
             //DatagridXAML.ItemsSource = ds.Tables["Code_Clienta"].DefaultView;
             goJob.ItemsSource = ds.Tables["Code_Clienta"].DefaultView;
             cn.Close();
+
+            //MessageBox.Show("connected");
         }
 
         public void conect2()
@@ -173,6 +182,12 @@ namespace trpo_juvilir_v1
 
             add_client add_Client = new add_client();
             add_Client.ShowDialog();
+        }
+
+        private void Button_Click_2(object sender, RoutedEventArgs e)
+        {
+            remove();
+            conect();
         }
     }
 }

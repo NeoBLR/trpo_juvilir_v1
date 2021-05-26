@@ -47,8 +47,10 @@ namespace trpo_juvilir_v1
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             this.Hide();
-            database d1 = new database();
-            d1.Show();
+            //database d1 = new database();
+            //d1.Show();
+
+            ProgramStatic.dbase.Show();
         }
     }
 }
