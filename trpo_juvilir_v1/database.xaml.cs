@@ -63,7 +63,7 @@ namespace trpo_juvilir_v1
 
         public void conect()
         {
-            OleDbConnection cn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\\Users\\regman\\source\\repos\\trpo_juvilir_v1\\trpo_juvilir_v1\\db.mdb");
+            OleDbConnection cn = new OleDbConnection(leDb_string);
 
             cn.Open();
 
@@ -84,7 +84,7 @@ namespace trpo_juvilir_v1
 
         public void conect2()
         {
-            OleDbConnection cn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\\Users\\regman\\source\\repos\\trpo_juvilir_v1\\trpo_juvilir_v1\\db.mdb");
+            OleDbConnection cn = new OleDbConnection(leDb_string);
 
             cn.Open();
 
@@ -226,11 +226,11 @@ namespace trpo_juvilir_v1
 
 
         }
-
+        public string leDb_string = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=.\\db.mdb";
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
 
-            OleDbConnection cn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\\Users\\regman\\source\\repos\\trpo_juvilir_v1\\trpo_juvilir_v1\\db.mdb");
+            OleDbConnection cn = new OleDbConnection(leDb_string);
 
             cn.Open();
 

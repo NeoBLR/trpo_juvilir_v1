@@ -85,11 +85,12 @@ namespace trpo_juvilir_v1
             tb.Text = string.Empty;
             tb.GotFocus -= TextBox_GotFocus;
         }
+        public string leDb_string = "Provider=Microsoft.Jet.OLEDB.4.0; Data Source=.\\db.mdb";
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
 
-            OleDbConnection cn = new OleDbConnection("Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\\Users\\regman\\source\\repos\\trpo_juvilir_v1\\trpo_juvilir_v1\\db.mdb");
+            OleDbConnection cn = new OleDbConnection(leDb_string);
 
             cn.Open();
 
