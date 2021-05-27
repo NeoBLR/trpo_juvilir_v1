@@ -239,11 +239,14 @@ namespace trpo_juvilir_v1
 
             string[] str = new string[6];
 
-            OleDbCommand oleDbCommand = new OleDbCommand($"", cn);
+            OleDbCommand oleDbCommand = new OleDbCommand($"DELETE FROM client WHERE Code_Clienta = {selected_id}", cn);
 
             oleDbCommand.ExecuteNonQuery();
 
             cn.Close();
+
+            remove();
+            conect();
 
         }
     }

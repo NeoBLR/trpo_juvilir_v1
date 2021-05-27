@@ -205,7 +205,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="firsname" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="t_firsname" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
+                <TextBox x:Name="t_firsname" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
 
             </Grid>
 
@@ -216,7 +216,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="patronymic" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="t_patronymic" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
+                <TextBox x:Name="t_patronymic" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
 
             </Grid>
 
@@ -227,7 +227,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="data of birht" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="t_birht" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
+                <TextBox x:Name="t_birht" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
 
             </Grid>
 
@@ -238,7 +238,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="pasport id" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="t_passport" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
+                <TextBox x:Name="t_passport" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
 
             </Grid>
 
@@ -249,7 +249,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="Adress" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="t_adress" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
+                <TextBox x:Name="t_adress" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
 
             </Grid>
 
