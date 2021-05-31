@@ -194,7 +194,7 @@
                 </Grid.ColumnDefinitions>
 
                 <Label Grid.Column="0" Content="surname" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
-                <TextBox x:Name="t_surname" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5" GotFocus="TextBox_GotFocus"/>
+                <TextBox x:Name="t_surname" Grid.Column="1" Text="Введите текст" Background="#19FFFFFF" Foreground="White" Margin="5"/>
 
             </Grid>
 

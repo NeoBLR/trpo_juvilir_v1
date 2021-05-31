@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:iconPacks="http://metro.mahapps.com/winfx/xaml/iconpacks" 
         xmlns:local="clr-namespace:trpo_juvilir_v1"
         mc:Ignorable="d"
         xmlns:fw="clr-namespace:SourceChord.FluentWPF;assembly=FluentWPF"
@@ -201,7 +202,6 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height=".8*"/>
                             <RowDefinition Height="3*"/>
-                            <RowDefinition Height="3*"/>
 
 
                         </Grid.RowDefinitions>
@@ -216,10 +216,56 @@
 
 
                             </Grid.ColumnDefinitions>
-                            <Button Content="Добавить" Grid.Column="0"  FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_1"/>
-                            <Button Content="Изменить" Grid.Column="1"   FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_3"/>
-                            <Button Content="Удалить" Grid.Column="2"   FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_4"/>
-                            <Button Content="Обновить" Grid.Column="3"   FontSize="12" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_2"/>
+                            <Button Grid.Column="0" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_1">
+                                
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <iconPacks:PackIconModern Kind="Add" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Content="Добавить" FontSize="14" Grid.Column="1" Foreground="White"/>
+                                </Grid>
+                               
+                            </Button>
+                            <Button Grid.Column="1"   FontSize="20" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_3">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <iconPacks:PackIconModern Kind="Edit" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Content="Изменить" FontSize="14" Grid.Column="1" Foreground="White"/>
+                                </Grid>
+                            </Button>
+                            <Button Grid.Column="2"   FontSize="20" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_4">
+                                      <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <iconPacks:PackIconModern Kind="Delete" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Content="Удалить" FontSize="14" Grid.Column="1" Foreground="White"/>
+                                </Grid>
+                            </Button>
+                            <Button Grid.Column="3"   FontSize="20" Foreground="White" Style="{DynamicResource btn_grad}" Background="#19FFFFFF" Click="Button_Click_2">
+                                <Grid >
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition/>
+                                        <ColumnDefinition/>
+
+                                    </Grid.ColumnDefinitions>
+
+                                    <iconPacks:PackIconModern Kind="Refresh" HorizontalAlignment="Center" VerticalAlignment="Center" />
+                                    <Label Content="Обновить" FontSize="14" Grid.Column="1" Foreground="White"/>
+                                </Grid>
+                            </Button>
 
 
                         </Grid>
@@ -257,7 +303,6 @@
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height=".8*"/>
-                            <RowDefinition Height="3*"/>
                             <RowDefinition Height="3*"/>
 
 
