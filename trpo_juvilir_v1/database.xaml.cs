@@ -82,6 +82,28 @@ namespace trpo_juvilir_v1
             //MessageBox.Show("connected");
         }
 
+
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            remove();
+
+            OleDbConnection cn = new OleDbConnection(leDb_string);
+
+            cn.Open();
+
+            OleDbDataAdapter da = new OleDbDataAdapter($"SELECT * FROM client WHERE surname LIKE '{Find.Text}%' OR firstname LIKE '{Find.Text}%' ", cn);
+            OleDbCommandBuilder cb = new OleDbCommandBuilder(da);
+
+            DataSet ds = new DataSet();
+
+            da.Fill(ds, "Code_Clienta");
+
+
+            //DatagridXAML.ItemsSource = ds.Tables["Code_Clienta"].DefaultView;
+            goJob.ItemsSource = ds.Tables["Code_Clienta"].DefaultView;
+            cn.Close();
+        }
+
         public void conect2()
         {
             OleDbConnection cn = new OleDbConnection(leDb_string);
@@ -220,7 +242,6 @@ namespace trpo_juvilir_v1
                 ProgramStatic.cclient.t_passport.Text = row_selected["passport_ID"].ToString();
                 ProgramStatic.cclient.t_adress.Text = row_selected["Address"].ToString();
 
-
             }
 
 
@@ -249,5 +270,23 @@ namespace trpo_juvilir_v1
             conect();
 
         }
+
+        private void Find_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            if (tb.Text != "ПОИСК")
+            {
+                Button_Click_5(sender, e);
+            }
+        }
+
+        private void Find_GotFocus(object sender, RoutedEventArgs e)
+        {
+            TextBox tb = (TextBox)sender;
+            tb.Text = string.Empty;
+            tb.GotFocus -= Find_GotFocus;
+        }
+
+
     }
 }
